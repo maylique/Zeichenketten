@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <sect>
+        <section>
+            <h1>Zeichen Ketten Trennungs Maschine</h1>
+            <form>
+                <div>
+                    <label for="ZuTrennend">Zu trennende Zeichenkette</label>
+                    <input type="text" id="ZuTrennenInput">
+                </div>
+                <div>
+                    <label for="TrennenBei">Trennen bei Zeichenkette</label>
+                    <input type="text" id="WasWegSoll">
+                </div>
+                <div>
+                    <input type="radio" name="Trennen" id="DavorTrennen" checked>
+                    <option value="0">Davor Trennen</option>
+                    <input type="radio" name="Trennen" id="DanachTrennen">
+                    <option value="1">Danach Trennen</option>
+                </div>
+                <input type="submit" value="Trennen" onclick="Trim(); return false">
+            </form>
+            <div>
+                <h2>Ausgabe</h2>
+                <h3>Vorderer Teil</h3>
+                <p id="outputVor"></p>
+                <h3>Hinterer Teil</h3>
+                <p id="outputDanach"></p>
+            </div>
+        </section>
+    </sect>
     
     <script src="./assets/javascript/main.js"></script>
 </body>

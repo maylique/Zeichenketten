@@ -1,6 +1,37 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'poppins';
 }
 
+sect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background: linear-gradient(to right bottom, grey 60%, blue);
+}
+
+section {
+    padding: 2rem;
+    border-radius: 20px;
+    background: linear-gradient(to left top, grey 20%, blue);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
