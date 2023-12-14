@@ -7,10 +7,21 @@ const Trim = () => {
     const outputDavor = document.querySelector('#outputVor')
     const outputDanach = document.querySelector('#outputDanach')
 
-    let ergebnis = input.indexOf(sollWeg)
+    let getIndex = input.indexOf(sollWeg)
+    let ergebnisDavor1 = input.slice(0, getIndex)
+    let ergebnisDavor2 = input.slice(getIndex)
+    let ergebnisDanach1 = input.slice(0, getIndex + 1)
+    let ergebnisDanach2 = input.slice(getIndex + 1)
+
 
         if (davorWeg){
-            outputDavor.innerHTML = ergebnis.slice(input)
+            outputDavor.innerHTML = ergebnisDavor1
+            outputDanach.innerHTML = ergebnisDavor2
+        }
+
+        else if (danachWeg){
+            outputDavor.innerHTML = ergebnisDanach1
+            outputDanach.innerHTML = ergebnisDanach2
         }
         else {
             outputDavor.innerHTML = 'ERROR'
