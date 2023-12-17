@@ -10,8 +10,8 @@ const Trim = () => {
     let getIndex = input.indexOf(sollWeg)
     let ergebnisDavor1 = input.slice(0, getIndex)
     let ergebnisDavor2 = input.slice(getIndex)
-    let ergebnisDanach1 = input.slice(0, getIndex + 1)
-    let ergebnisDanach2 = input.slice(getIndex + 1)
+    let ergebnisDanach1 = input.slice(0, getIndex + sollWeg.length)
+    let ergebnisDanach2 = input.slice(getIndex + sollWeg.length)
 
 
         if (davorWeg){
@@ -25,5 +25,6 @@ const Trim = () => {
         }
         else {
             outputDavor.innerHTML = 'ERROR'
+            outputDanach.innerHTML = 'ERROR'
         }
 }
